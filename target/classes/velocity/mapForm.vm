@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-framework="intercoolerjs">
+<head>
+    <meta charset="utf-8">
+    <title>Spark & intercooler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <form action="/api/fieldsMap" method="get" enctype="multipart/form-data">
+
+        <input type="hidden" id="fileName" name="fileName" value="$fileName">
+
+      <label for="name"> Name: </label>
+      <select id = "name" name="name">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="short_desc"> Short description:  </label>
+      <select id = "short_desc" name="short_desc">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="desc"> Description: </label>
+      <select id = "desc" name="desc">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="price"> Price: </label>
+      <select id = "price" name="price">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="wholesale_price"> Wholesale price: </label>
+      <select id = "wholesale_price" name="wholesale_price">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="sku/id"> sku/id: </label>
+      <select id = "sku/id" name="sku/id">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="unit_multiplier"> Unit multiplier </label>
+      <select id = "unit_multiplier" name="unit_multiplier">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="option_desc"> Option description: </label>
+      <select id = "option_desc" name="option_desc">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+      <label for="available_qtd"> Avalaible quantity: </label>
+      <select id = "available_qtd" name="available_qtd">
+        #foreach($it in $mylist)
+        <option value="$it">$it</option>
+        #end
+      </select>
+      <br>
+
+
+
+      <br><br>
+      <input type="submit">
+    </form>
+
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/js/vendor/intercooler-0.9.6.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
